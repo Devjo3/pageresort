@@ -117,8 +117,9 @@ body {
 .carousel-container {
   max-width: 100%; /* Defina a largura máxima do contêiner do carrossel */
   height: auto;
+  background: linear-gradient(to right, #a5ad345c, #a5ad345c, #878d29); /* Substitua as cores hexadecimais pelas desejadas */
+  margin: 0 auto; /* Isso centralizará horizontalmente o carousel */
   /*max-height: 400px; /* Ajuste a altura máxima do contêiner do carrossel conforme necessário */
-  margin: auto; /* Centraliza o contêiner na página */
   overflow: hidden; /* Esconde partes do conteúdo que ultrapassam o contêiner */
 }
 
