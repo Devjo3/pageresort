@@ -4,6 +4,11 @@
   height: 1rem;
 }
 
+.imagem-banner {
+  width: 100%; /* Define a largura da imagem para ocupar 100% da largura do contêiner pai */
+  max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho máximo do contêiner pai */
+  height: auto; /* Permite que a altura seja ajustada automaticamente para manter a proporção original */
+}
 
 /*
  * Navbar
