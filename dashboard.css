@@ -9,6 +9,13 @@
   max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho máximo do contêiner pai */
   height: auto; /* Permite que a altura seja ajustada automaticamente para manter a proporção original */
 }
+    /* Estilo para telas menores */
+    @media screen and (max-width: 768px) {
+      #imagem-banner {
+          width: 100%;
+          height: auto;
+      }
+  }
 
 /*
  * Navbar
