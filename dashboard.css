@@ -13,6 +13,7 @@
     @media screen and (max-width: 768px) {
       #imagem-banner {
           width: 100%;
+          max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho máximo do contêiner pai */
           height: auto;
       }
   }
