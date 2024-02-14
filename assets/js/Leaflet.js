@@ -1,5 +1,5 @@
     // Coordenadas de exemplo (substitua por suas próprias coordenadas)
-    var coordenadas = [-19.9025886, -49.3699186];
+    var coordenadas = [-19.897722,-49.520823];
 
     // Inicialize o mapa
     var mapa = L.map('mapa').setView(coordenadas, 13);
