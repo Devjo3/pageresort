@@ -188,8 +188,8 @@
             <a class="nav-link" href="#section-0" onclick="closeNavbar()">Produtos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#section-1" onclick="closeNavbar()">Carrinho</a>
-          </li>
+            <a class="nav-link" href="#" onclick="openCartModal()">Carrinho</a>
+        </li>
           <li class="nav-item">
             <a class="nav-link" href="index.html" onclick="closeNavbar()">Sair</a>
           </li>
@@ -197,7 +197,28 @@
       </div>
     </div>
   </nav>
-  
+  <!-- Modal -->
+<div class="modal fade" id="carrinhoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Seu Carrinho</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Conteúdo do carrinho aqui -->
+        <!-- Exemplo: -->
+        <p>Item 1</p>
+        <p>Item 2</p>
+        <!-- Adicione mais conteúdo conforme necessário -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Finalizar Compra</button>
+      </div>
+    </div>
+  </div>
+</div>
   <div id="carouselExample" class="carousel slide carousel-container" data-ride="carousel" data-interval="false">
     <div class="carousel-inner mt-3">
       <!-- Primeiro item do carousel -->
