@@ -219,3 +219,9 @@ body {
 .navbar-custom {
   background: linear-gradient(to right, #878d29, #878d29, #a5ad345c); /* Substitua as cores hexadecimais pelas desejadas */
 }
+
+
+.carousel-item.prev,
+.carousel-item.next {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Adiciona sombra aos itens anterior e próximo */
+}
