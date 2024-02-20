@@ -5,18 +5,23 @@
 }
 
 .imagem-banner {
-  width: 100%; /* Define a largura da imagem para ocupar 100% da largura do contêiner pai */
-  max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho máximo do contêiner pai */
-  height: auto; /* Permite que a altura seja ajustada automaticamente para manter a proporção original */
+  width: 100%;
+  /* Define a largura da imagem para ocupar 100% da largura do contêiner pai */
+  max-width: 100%;
+  /* Garante que a imagem não ultrapasse o tamanho máximo do contêiner pai */
+  height: auto;
+  /* Permite que a altura seja ajustada automaticamente para manter a proporção original */
 }
-    /* Estilo para telas menores */
-    @media screen and (max-width: 768px) {
-      #imagem-banner {
-          width: 100%;
-          max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho máximo do contêiner pai */
-          height: auto;
-      }
+
+/* Estilo para telas menores */
+@media screen and (max-width: 768px) {
+  #imagem-banner {
+    width: 100%;
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse o tamanho máximo do contêiner pai */
+    height: auto;
   }
+}
 
 /*
  * Navbar
@@ -24,8 +29,10 @@
 
 .custom-navbar-brand .logo-img {
   /* Estilos personalizados para a imagem dentro da div */
-  width: 145px; /* Altere conforme necessário */
-  height: auto; /* Mantém a proporção original */
+  width: 145px;
+  /* Altere conforme necessário */
+  height: auto;
+  /* Mantém a proporção original */
 }
 
 
@@ -36,7 +43,9 @@
 /* stylelint-disable stylistic/selector-list-comma-newline-after */
 
 .blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif
+    /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+  ;
   font-size: 2.25rem;
 }
 
@@ -44,17 +53,29 @@
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif
+    /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+  ;
 }
 
 .flex-auto {
   flex: 0 0 auto;
 }
 
-.h-250 { height: 250px; }
+.h-250 {
+  height: 250px;
+}
+
 @media (min-width: 768px) {
-  .h-md-250 { height: 250px; }
+  .h-md-250 {
+    height: 250px;
+  }
 }
 
 /* Pagination */
@@ -68,6 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 .blog-post {
   margin-bottom: 4rem;
 }
+
 .blog-post-meta {
   margin-bottom: 1.25rem;
   color: #727272;
@@ -75,7 +97,8 @@ h1, h2, h3, h4, h5, h6 {
 
 html,
 body {
-  overflow-x: hidden; /* Prevent scroll on narrow devices */
+  overflow-x: hidden;
+  /* Prevent scroll on narrow devices */
 }
 
 body {
@@ -85,7 +108,8 @@ body {
 @media (max-width: 991.98px) {
   .offcanvas-collapse {
     position: fixed;
-    top: 56px; /* Height of navbar */
+    top: 56px;
+    /* Height of navbar */
     bottom: 0;
     left: 100%;
     width: 100%;
@@ -96,6 +120,7 @@ body {
     background-color: #343a40;
     transition: transform .3s ease-in-out, visibility .3s ease-in-out;
   }
+
   .offcanvas-collapse.open {
     visibility: visible;
     transform: translateX(-100%);
@@ -128,12 +153,16 @@ body {
 
 
 .carousel-container {
-  max-width: 100%; /* Defina a largura máxima do contêiner do carrossel */
+  max-width: 100%;
+  /* Defina a largura máxima do contêiner do carrossel */
   height: auto;
-  background: linear-gradient(to right, #a5ad345c, #a5ad345c, #878d29); /* Substitua as cores hexadecimais pelas desejadas */
-  margin: 0 auto; /* Isso centralizará horizontalmente o carousel */
+  background: linear-gradient(to right, #a5ad345c, #a5ad345c, #878d29);
+  /* Substitua as cores hexadecimais pelas desejadas */
+  margin: 0 auto;
+  /* Isso centralizará horizontalmente o carousel */
   /*max-height: 400px; /* Ajuste a altura máxima do contêiner do carrossel conforme necessário */
-  overflow: hidden; /* Esconde partes do conteúdo que ultrapassam o contêiner */
+  overflow: hidden;
+  /* Esconde partes do conteúdo que ultrapassam o contêiner */
 }
 
 
@@ -217,11 +246,13 @@ body {
 }
 
 .navbar-custom {
-  background: linear-gradient(to right, #878d29, #878d29, #a5ad345c); /* Substitua as cores hexadecimais pelas desejadas */
+  background: linear-gradient(to right, #878d29, #878d29, #a5ad345c);
+  /* Substitua as cores hexadecimais pelas desejadas */
 }
 
 
 .carousel-item.prev,
 .carousel-item.next {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Adiciona sombra aos itens anterior e próximo */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  /* Adiciona sombra aos itens anterior e próximo */
 }
