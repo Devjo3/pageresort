@@ -2,7 +2,10 @@
     let carrinho = [];
 
     // Função para adicionar um produto ao carrinho
-    function adicionarAoCarrinho(idProduto) {
+    function adicionarAoCarrinho(event, idProduto) {
+
+      event.preventDefault();
+
         // Encontre o produto pelo ID
         let produto = {
             id: idProduto,
