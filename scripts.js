@@ -3,5 +3,9 @@ function closeNavbar() {
     document.getElementById('navbarSideCollapse').click();
   }
   function openCartModal() {
-    $('#carrinhoModal').modal('show'); // Abre o modal do carrinho
+    // Fecha a barra de navegação
+    closeNavbar();
+
+    // Abre o modal do carrinho
+    $('#carrinhoModal').modal('show');
 }
