@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Quartos</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom styles */
+        /* Adicione estilos personalizados aqui, se necessário */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Reserva de Quartos</h1>
+        <form id="reservationForm">
+            <div class="form-group">
+                <label for="checkInDate">Data de Check-in:</label>
+                <input type="date" class="form-control" id="checkInDate" name="checkInDate" required>
+            </div>
+            <div class="form-group">
+                <label for="checkOutDate">Data de Check-out:</label>
+                <input type="date" class="form-control" id="checkOutDate" name="checkOutDate" required>
+            </div>
+            <div class="form-group">
+                <label for="roomType">Tipo de Apartamento:</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-primary">
+                        <input type="checkbox" name="roomType[]" value="Alecrim"> Alecrim (03 leitos single)
+                    </label>
+                    <label class="btn btn-outline-primary">
+                        <input type="checkbox" name="roomType[]" value="Lavanda"> Lavanda (01 leito casal e 01 single)
+                    </label>
+                    <label class="btn btn-outline-primary">
+                        <input type="checkbox" name="roomType[]" value="Jasmim"> Jasmim (01 leito casal e 01 single)
+                    </label>
+                    <label class="btn btn-outline-primary">
+                        <input type="checkbox" name="roomType[]" value="Alfazema"> Alfazema (01 leito casal)
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Reservar</button>
+        </form>
+
+        <div id="reservationResult" class="mt-3">
+            <!-- Aqui será exibido o resultado da reserva -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS e jQuery (opcional, necessário apenas se você planeja usar funcionalidades do Bootstrap que requerem JavaScript) -->
+    <script src="assets/dist/js/reservas.js"></script>
+
+
+</body>
+
+</html>
