@@ -1,9 +1,9 @@
 <?php
 // Conexão com o banco de dados (substitua as credenciais conforme necessário)
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bela_vista";
+$username = "u850203140_belavista";
+$password = "Bela2024$";
+$dbname = "u850203140_bela_vista";
 
 // Cria conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -32,11 +32,11 @@ $sql_check_documento = "SELECT * FROM cliente WHERE documento = '$documento'";
 $result_check_documento = $conn->query($sql_check_documento);
 
 if ($result_check_email->num_rows > 0) {
-    // Se o email já existe, exibe uma mensagem de erro
-    echo "Erro: Este email já está cadastrado.";
+    // Se o email já existe, define a mensagem de erro
+    $message = "Erro: Este email já está cadastrado.";
 } elseif ($result_check_documento->num_rows > 0) {
-    // Se o documento já existe, exibe uma mensagem de erro
-    echo "Erro: Já existe um cliente cadastrado com este número de documento.";
+    // Se o documento já existe, define a mensagem de erro
+    $message = "Erro: Já existe um cliente cadastrado com este número de documento.";
 } else {
     // Se o email e documento não existem, criptografa a senha e insere os dados na tabela
     $password_hash = password_hash($senha, PASSWORD_DEFAULT);
@@ -45,24 +45,27 @@ if ($result_check_email->num_rows > 0) {
     VALUES ('$nome', '$telefone', '$email', '$endereco', '$cidade', '$estado', '$password_hash', '$documento')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Registro realizado com sucesso!";
+        // Se o registro for bem-sucedido, define a mensagem de sucesso
+        $message = "Registro realizado com sucesso!";
         
         // Envio de email de confirmação
         $to = $email;
         $subject = "Confirmação de Cadastro";
-        $message = "Olá $nome,\n\nObrigado por se cadastrar em nosso site. Seu cadastro foi realizado com sucesso.";
-        $headers = "From: seuemail@seudominio.com" . "\r\n" .
-                   "Reply-To: seuemail@seudominio.com" . "\r\n" .
+        $message = "Olá $nome,\n\nObrigado por se cadastrar em nosso site. Seu registro foi realizado com sucesso.";
+        $headers = "From: belavistahomeresort@outlook.com" . "\r\n" .
+                   "Reply-To: belavistahomeresort@outlook.com" . "\r\n" .
                    "X-Mailer: PHP/" . phpversion();
 
         mail($to, $subject, $message, $headers);
-        
-        echo "Um e-mail de confirmação foi enviado para o seu endereço de e-mail.";
     } else {
-        echo "Erro: " . $sql . "<br>" . $conn->error;
+        // Se houver um erro durante a inserção, define a mensagem de erro com detalhes
+        $message = "Erro: " . $sql . "<br>" . $conn->error;
     }
 }
 
 // Fecha a conexão
 $conn->close();
+
+// Retorna a mensagem como uma resposta AJAX
+echo $message;
 ?>
